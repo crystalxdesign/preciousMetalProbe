@@ -14,7 +14,6 @@ This collects training data; it does not yet train or run a classifier.
 - `docs/preciousMetalProbe.png` and `.svg`: wiring schematic with component pin numbers.
 - `docs/wiring.md`: complete net list, component list and bring-up procedure.
 - `tests/test_protocol.py`: serial framing, CRC and fault-rejection tests.
-- `prebuilt/`: compiled outputs and validation report, if included in this package.
 
 ## Circuit
 
