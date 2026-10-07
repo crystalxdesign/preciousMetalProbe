@@ -1,3 +1,6 @@
 .vscode
 build
 .venv
+data/captures.jsonl
+host/__pycache__
+tests/__pycache__
