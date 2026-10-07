@@ -1,0 +1,13 @@
+; 1 MHz instruction clock. GPIO is low before this program starts.
+; Put PRE_DELAY_US - 3 in the TX FIFO before enabling the SM.
+; pull + out + (X+1) jmp cycles = PRE_DELAY_US cycles to rising edge.
+.program excite
+.wrap_target
+    pull block
+    out x, 32
+delay:
+    jmp x-- delay
+    set pins, 1 [4]  ; high for exactly 5 instruction cycles = 5 us
+    set pins, 0
+    irq 0           ; completion flag; no CPU interrupt enabled
+.wrap
